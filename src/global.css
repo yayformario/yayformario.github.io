@@ -1,0 +1,143 @@
+/*****************
+Author: Mario Huerta
+Date: April 8th, 2025
+
+TODO:
+Light academia coloring for light mode
+
+*****************/
+
+/*
+I try my best to organize things with a top/bottom approach
+Also like to organize things as:
+- Colors
+- Padding
+- Text
+*/
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dark Academia coloring by default*/
+:root {
+  --background: #2d3f36;
+  --foreground: #F5DEB3;
+}
+
+header {
+  background: #81583c;
+  color: var(--foreground);
+
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Hide any overflow for navigation bar*/
+.topnav{
+  background: #81583c;
+  color: var(--foreground);
+  
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar*/
+.topnav a{
+  color: var(--foreground);
+  
+  padding: 14px 16px;
+
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/*Change color of links on hover*/
+nav a:hover {
+  color: #6B2D2C;
+}
+
+/*Add color to the active/ current link*/
+.topnav a.active {
+  color: hsl(47, 100%, 63%);
+}
+
+body{
+  background: var(--background);
+  color: var(--foreground);
+
+  font-family: 'Times New Roman', sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+footer{
+  background: #1d2631;
+
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Mobile stuff */
+@media (max-width: 768px) {
+  /*Center top navigation and let them wrap*/
+  .topnav {
+    justify-content: center;
+    flex-wrap: wrap;
+  } 
+}
+
+
+/**** 
+-----
+TODO: Light Academia coloring 
+-------
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #717d5a;
+    --foreground: #f5e5c3;
+  }
+  
+  header {
+    background: #b99972;
+    color: var(--foreground);
+  }
+
+  .topnav{
+    color: #2c2323;
+  }
+  
+  .topnav a{
+    color: #050303;
+  }
+  
+  nav a:hover {
+    color: #6B2D2C;
+  }
+
+  body{
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+
+  footer{
+    background: #384a62;
+    color: #e1d9c9;
+  }
+}
+
+****/

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Meta Tags -->
+         <meta charset="UTF-8"> <!--For special characters-->
+
+         <!-- Match device width and set initial zoom to 1:1 -->
+          <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+
+        <title> {{title}} </title>
+        <link rel="stylesheet" href="global.css">
+    </head>
+
+    <body>
+        <!-- Header -->
+        {% include 'header.njk' %}
+
+        <!--
+        Renders 'content' as a string
+        safe is what allows it to render as html
+        
+        The double curlys
+            Grabs data from meta data
+            - included in front matter of the file
+        -->
+        {{ content | safe }}
+        
+        <!-- Footer -->
+        {% include 'footer.njk'%}
+        <script src="main.js"></script>
+    </body>
+</html>

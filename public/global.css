@@ -38,6 +38,9 @@ header {
 
 /* Hide any overflow for navigation bar*/
 .topnav{
+  background: #81583c;
+  color: var(--foreground);
+  
   display: flex;
   justify-content: flex-end;
   overflow: hidden;
