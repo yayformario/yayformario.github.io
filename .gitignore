@@ -84,3 +84,6 @@ $RECYCLE.BIN/
 #Ignoring 11ty stuff
 node_modules
 color_schemes
+
+#Ignoring my test files
+test.md

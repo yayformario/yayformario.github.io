@@ -12,7 +12,7 @@ module.exports = async function(eleventyConfig) {
 	Output directory
 		default: _site
 	*/
-	eleventyConfig.setOutputDirectory('public')
+	eleventyConfig.setOutputDirectory('output')
 
 	//Copy 'global.css' to '_site'
 	eleventyConfig.addPassthroughCopy("./src/global.css");
