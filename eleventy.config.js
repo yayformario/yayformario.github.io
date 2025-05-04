@@ -14,8 +14,9 @@ module.exports = async function(eleventyConfig) {
 	*/
 	eleventyConfig.setOutputDirectory('output')
 
-	//Copy 'global.css' to '_site'
-	eleventyConfig.addPassthroughCopy("./src/global.css");
+	//Copy the entire css directory to '_site'
+	//whole directory to minimize the need to pass each file
+	eleventyConfig.addPassthroughCopy("src/css/");
 
 	//Grabbing assets as well
 	eleventyConfig.addPassthroughCopy('./assets');
