@@ -10,5 +10,15 @@ layout: 'baseTemplate.njk'
 
 
     <!-- looping through our collections with a 'post' tag -->
+    <!-- Unordered list that grabs the title of each post -->
+    <ul>
+        {%- for post in collections.post -%}
+        <li> 
+            <article>
+                <h3> {{post.data.title}} </h3>
+            </article>
+        </li>
+        {%- endfor -%}
+    </ul>
 
 </main>

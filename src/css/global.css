@@ -20,6 +20,7 @@ Also like to organize things as:
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 /* Dark Academia coloring by default*/
@@ -42,7 +43,7 @@ header {
   color: var(--foreground);
   
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -51,7 +52,6 @@ header {
   color: var(--foreground);
   
   padding: 14px 16px;
-
   text-decoration: none;
   font-size: 17px;
 }
@@ -72,6 +72,7 @@ body{
 
   font-family: 'Times New Roman', sans-serif;
   line-height: 1.6;
+  
 }
 
 main {
@@ -94,7 +95,6 @@ footer{
 @media (max-width: 768px) {
   /*Center top navigation and let them wrap*/
   .topnav {
-    justify-content: center;
     flex-wrap: wrap;
   } 
 }
