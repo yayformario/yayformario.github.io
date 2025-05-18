@@ -1,3 +1,5 @@
+const {DateTime} = require ('luxon');
+
 module.exports = async function(eleventyConfig) {
 	//Configure eleventy
 
@@ -20,5 +22,19 @@ module.exports = async function(eleventyConfig) {
 
 	//Grabbing assets as well
 	eleventyConfig.addPassthroughCopy('./assets');
+
+	//filter for formatting default javascript date
+	eleventyConfig.addFilter('postDate', (dateObj) => {
+	/*
+	TODO: find a way to configure to local timezone
+		eleventy by default uses UTC and then convers to local time
+		temporary workaround: using EDT in front matter
+		# Explicit timezones: -05:00 for EST; -04:00 for EDT
+	*/
+		return DateTime
+			.fromJSDate(dateObj) //convert js date to luxon dateTime
+			.toLocaleString(DateTime.DATE_MED); //format to medium-style date
+	});
+	
 
 };

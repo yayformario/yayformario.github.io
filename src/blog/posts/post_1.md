@@ -2,7 +2,8 @@
 websiteTitle: yayformar.io
 title: Post 1
 author: Mario Huerta
-date: 2025-04-29
+# Explicit timezones: -05:00 for EST; -04:00 for EDT
+date: 2025-04-29T00:00-04:00
 description: None
 layout: blogTemplate.njk
 ---
