@@ -2,28 +2,20 @@
 websiteTitle: yayformar.io
 title: Blog
 layout: 'baseTemplate.njk'
+activePage: blog
 ---
 
 <!-- Where the maint content will go-->
 <main>
     <section> Blog landing page </section>
 
-
     <ul>
-        <!-- looping through our collections with a 'post' tag -->
-        <!-- in reverse order (most recent post first) -->
+        <!-- 
+        looping through our collections with a 'featured' tag in reverse order (most recent post first)
+            - "For each post in collections with 'featured'"
+        -->
         {%- for post in collections.post | reverse -%}
-        <li> 
-            <article>
-                <!-- TODO: grab 'image' for each post -->
-
-                <!-- Grabs title of each each post -->
-                <!-- embed the link to each post in the title -->
-                <h3> <a href="{{ post.url }}"> {{post.data.title}} </a></h3>
-                <p> {{post.date | postDate}} </span></p>
-
-            </article>
-        </li>
+            {% include 'postPreview.njk'%}
         {%- endfor -%}
     </ul>
 

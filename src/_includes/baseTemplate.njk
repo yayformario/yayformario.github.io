@@ -19,7 +19,7 @@
 
     <body>
         <!-- Header -->
-        {% include 'headerTemplate.njk' %}
+        {% include 'header.njk' %}
 
         <!--
             Renders 'content' as a string
@@ -33,7 +33,7 @@
         {{ content | safe }}
         
         <!-- Footer amd javascript-->
-        {% include 'footerTemplate.njk'%}
+        {% include 'footer.njk'%}
         <script src="/js/main.js"></script>
     </body>
 
