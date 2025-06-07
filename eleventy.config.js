@@ -18,15 +18,15 @@ module.exports = async function(eleventyConfig) {
 	*/
 	eleventyConfig.setOutputDirectory('output')
 
-	//Copy the entire css directory to '_site'
+	//Copy the entire css directory to '_site'/whatever the setOutPutDirectory is called
 	//whole directory to minimize the need to pass each file
 	eleventyConfig.addPassthroughCopy("src/css/");
 
 	//Grabbing assets as well
-	eleventyConfig.addPassthroughCopy('./assets');
+	//eleventyConfig.addPassthroughCopy('./assets');
 
 	//Grabbing admin folder for Netlify's 'Identity' widget
-	eleventyConfig.addPassthroughCopy('./admin');
+	eleventyConfig.addPassthroughCopy('src/admin');
 
 
 	//filter for formatting default javascript date
