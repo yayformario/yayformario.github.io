@@ -12,7 +12,9 @@ module.exports = async function(eleventyConfig) {
 
 	/*
 	Output directory
-		default: _site
+		default value: _site
+			eleventyConfig.setOutputDirectory('_site')
+
 	*/
 	eleventyConfig.setOutputDirectory('output')
 
