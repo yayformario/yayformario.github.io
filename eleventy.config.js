@@ -25,6 +25,10 @@ module.exports = async function(eleventyConfig) {
 	//Grabbing assets as well
 	eleventyConfig.addPassthroughCopy('./assets');
 
+	//Grabbing admin folder for Netlify's 'Identity' widget
+	eleventyConfig.addPassthroughCopy('./admin');
+
+
 	//filter for formatting default javascript date
 	eleventyConfig.addFilter('postDate', (dateObj) => {
 	/*
