@@ -7,13 +7,13 @@ backend:
 
 
 # These lines should *not* be indented
-#media_folder: "" # Media files will be stored in the repo under static/images/uploads
-#public_folder: "" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "public/assets/blog" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/assets/blog" # The src attribute for uploaded media will begin with /images/uploads
 collections:
   - name: 'blog'
     label: 'Blog'
     folder: 'src/blog/posts'
-    create: 'true' #Allows us to create posts
+    create: true #Allows us to create posts
 
     #filename template
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"

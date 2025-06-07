@@ -23,7 +23,7 @@ module.exports = async function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/css/");
 
 	//Grabbing assets as well
-	//eleventyConfig.addPassthroughCopy('./assets');
+	eleventyConfig.addPassthroughCopy('./assets');
 
 	//Grabbing admin folder for Netlify's 'Identity' widget
 	eleventyConfig.addPassthroughCopy('src/admin');
