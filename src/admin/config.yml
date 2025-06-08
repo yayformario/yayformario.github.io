@@ -28,7 +28,7 @@ collections:
       - { label: 'Author', name: 'author', widget: 'string', default: 'Mario Huerta'}
       - { label: 'Date', name: 'date', widget: 'datetime'}
       - { label: 'Body', name: 'body', widget: 'markdown'}
-      - { label: 'Nunjucks Template', name: 'template', widget: 'string', default: 'baseTemplate.njk'}
+      - { label: 'Nunjucks Template', name: 'layout', widget: 'string', default: 'baseTemplate.njk'}
       - { label: 'Website Title', name: 'websiteTitle', widget: 'hidden', default: 'yayformar.io'}
       - { label: 'Tags', name: 'tags', widget: 'list', default: ['post']}
       #TODO: images and image captions
