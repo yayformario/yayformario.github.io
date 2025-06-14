@@ -5,16 +5,17 @@ Date: April 8th, 2025
 TODO:
 Light academia coloring for light mode
 
-*****************/
-
-/*
+Disclaimer:
 I try my best to organize things with a top/bottom approach
 Also like to organize things as:
 - Colors
 - Padding
 - Text
-*/
+*****************/
 
+/*****************
+Basic rules after resetting styles
+*****************/
 /* Reset styles */
 * {
   margin: 0;
@@ -66,6 +67,8 @@ nav a:hover {
   color: hsl(47, 100%, 63%);
 }
 
+
+
 body{
   background: var(--background);
   color: var(--foreground);
@@ -91,7 +94,41 @@ footer{
   width: 100%;
 }
 
-/* Mobile stuff */
+/*****************
+Specific css for a 'sticky footer' on the bottom of the page
+- stretch the whole body the full height of the screen
+- stack the elements vertically (header, nav, main, footer)
+- let <main> grow to fill all the leftover vertical space between header/nav and footer
+*****************/
+
+/*
+By default: <html> and <body> only grow as tall as their content
+  - height: 100% ensures that they stretch to fill the full viewport height
+  - helps create a 'floor' for the footer to sit on
+*/
+html, body { 
+  height: 100%;
+}
+
+/*
+<body> by default is a block container
+  - converting it into a flex container for flex layout algo
+  - allows control of direction, spacing, growth, and alignment of children
+
+flex-direction: column
+  - makes children stack vertically (top to bottom)  
+*/
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+/*****************
+Mobile stuff 
+*****************/
 @media (max-width: 768px) {
   /*Center top navigation and let them wrap*/
   .topnav {

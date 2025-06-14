@@ -14,7 +14,7 @@
         <title> {{title}} </title>
         <link rel="stylesheet" href="/css/global.css">
         <!-- Additional styles that might be required -->
-        {% block styles %}{% endblock %}
+        <!-- {% block styles %}{% endblock %} -->
 
         <!-- Netlify Identity Widget: For Netlify's built-in authentication service 'Identity' -->
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -33,7 +33,10 @@
                 - included in front matter of the file
         -->
         <!-- Markdown content goes here -->
-        {{ content | safe }}
+        <main> 
+            {{ content | safe }}
+        </main>
+        
         
         <!-- Footer amd javascript-->
         {% include 'footer.njk'%}
