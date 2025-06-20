@@ -6,17 +6,14 @@ activePage: blog
 ---
 
 <!-- Where the maint content will go-->
-<main>
-    <section> Blog landing page </section>
+<section> Blog landing page </section>
 
-    <ul>
-        <!-- 
-        looping through our collections with a 'featured' tag in reverse order (most recent post first)
-            - "For each post in collections with 'featured'"
-        -->
-        {%- for post in collections.post | reverse -%}
-            {% include 'postPreview.njk'%}
-        {%- endfor -%}
-    </ul>
-
-</main>
+<ul>
+    <!-- 
+    looping through our collections with a 'featured' tag in reverse order (most recent post first)
+        - "For each post in collections with 'featured'"
+    -->
+    {%- for post in collections.post | reverse -%}
+        {% include 'postPreview.njk'%}
+    {%- endfor -%}
+</ul>
