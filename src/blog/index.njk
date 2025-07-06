@@ -14,6 +14,6 @@ activePage: blog
         - "For each post in collections with 'featured'"
     -->
     {%- for post in collections.post | reverse -%}
-        {% include 'postPreview.njk'%}
+        {% include 'postPreviewTemplate.njk'%}
     {%- endfor -%}
 </ul>

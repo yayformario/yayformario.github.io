@@ -15,15 +15,13 @@
         <link rel="stylesheet" href="/css/global.css">
         <!-- Additional styles that might be required -->
         <!-- {% block styles %}{% endblock %} -->
-
-        <!-- Netlify Identity Widget: For Netlify's built-in authentication service 'Identity' -->
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
 
-    <body>
-        <!-- Header -->
-        {% include 'header.njk' %}
 
+    <!-- Body -->
+    <body>
+    <!-- Navbar -->
+    {% include 'navbarTemplate.njk' %}
         <!--
             Renders 'content' as a string
             safe is what allows it to render as html
@@ -32,33 +30,15 @@
                 Grabs data from meta data
                 - included in front matter of the file
         -->
-        <!-- Markdown content goes here -->
-        <main> 
-            {{ content | safe }}
-        </main>
+    <!-- Markdown content goes here -->
+    <main> 
+        {{ content | safe }}
+    </main>
         
         
-        <!-- Footer amd javascript-->
-        {% include 'footer.njk'%}
-        <script src="/js/main.js"></script>
-
-        <!--
-        script for netlify Identity widget
-            Access token directs to the site homepage.
-            - To complete the login and get back to the cms
-              redirect the user back to the /admin/ path 
-        -->
-        <script>
-            if (window.netlifyIdentity) {
-                window.netlifyIdentity.on("init", (user) => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
-                    });
-                }
-                });
-            }
-        </script>
+    <!-- Footer amd javascript-->
+    {% include 'footerTemplate.njk'%}
+    <script src="/js/main.js"></script>
     </body>
 
 </html>

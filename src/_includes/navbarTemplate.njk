@@ -1,5 +1,4 @@
 <header>
-    <h1> {{ websiteTitle }} </h1>
 </header>
 
 <nav class = 'topnav'>
@@ -9,6 +8,8 @@
                 use 'active
             else use ''
             -->
+        <a> {{ websiteTitle }} </a>
+
         <a 
             class="{% if activePage == 'home' %}active{% endif %}"
             href="/index.html"> 
