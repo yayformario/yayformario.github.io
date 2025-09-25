@@ -1,0 +1,12 @@
+<ul class = 'allPosts'>
+    <!-- 
+    ORIGINAL LOOP:
+    looping through our collections with a 'featured' tag in reverse order (most recent post first)
+        - "For each post in collections with 'featured'"
+    -->
+    <li>
+    {%- for post in collections.post | reverse  -%}
+        {% include 'snippets/postPreview.njk'%}
+    {%- endfor -%}
+    </li>
+</ul>

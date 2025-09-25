@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tags -->
+         <meta charset="UTF-8"> <!--For special characters-->
+
+         <!-- Match device width and set initial zoom to 1:1 -->
+          <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+
+        <!-- 
+        1. grabbing title fron front matter
+        2. importing global css
+        -->
+        <title> {{title}} </title>
+        
+        <!-- For extending / overwritting css -->
+        <link rel="stylesheet" href="/css/global.css">
+        {% block styles %} 
+        {% endblock %}
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        {% include 'snippets/navbar.njk'%}
+
+        {% block starter %} 
+        {% endblock %}
+
+        <!-- Markdown content goes here -->
+        <main> 
+            {{ content | safe }}
+        </main>
+        
+        <footer>
+            {% include 'snippets/footer.njk'%}
+        </footer>
+        <!-- Scripts -->
+        <script src="/js/main.js"></script>
+    </body>
+
+  
+</html>

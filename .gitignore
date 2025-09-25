@@ -88,3 +88,4 @@ color_schemes
 #Ignoring my test files
 test.md
 /output
+test.njk

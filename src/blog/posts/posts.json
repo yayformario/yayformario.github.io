@@ -1,6 +1,6 @@
 {
     "author": "Mario Huerta",
-    "layout": "baseTemplate.njk",
+    "layout": "templates/blogTemplate.njk",
     "websiteTitle": "yayformar.io",
     "tags": ["post"]
 }

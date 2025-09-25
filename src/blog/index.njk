@@ -1,19 +1,15 @@
 ---
 websiteTitle: yayformar.io
 title: Blog
-layout: 'baseTemplate.njk'
+layout: 'templates/blogTemplate.njk'
 activePage: blog
 ---
 
-<!-- Where the maint content will go-->
-<section> Blog landing page </section>
 
-<ul>
-    <!-- 
-    looping through our collections with a 'featured' tag in reverse order (most recent post first)
-        - "For each post in collections with 'featured'"
-    -->
-    {%- for post in collections.post | reverse -%}
-        {% include 'postPreviewTemplate.njk'%}
-    {%- endfor -%}
-</ul>
+<!-- Where the maint content will go-->
+<h1 class = 'blogTitle'>
+    The Daily Deployment
+</h1>
+
+{% include 'snippets/allPosts.njk'%}
+

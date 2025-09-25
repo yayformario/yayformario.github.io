@@ -1,0 +1,35 @@
+/*****************
+Author: Mario Huerta
+Date: August 16th, 2025
+*****************/
+
+/*****************
+Intro 
+*****************/
+.blogDescription {
+    background-color: aliceblue;
+    grid-row: 2 / 6;
+    grid-column: 1 / 6;
+}
+
+.profilePic {
+    background-color: brown;
+    grid-row: 2 / 6;
+    grid-column: 6 / -1;
+}
+
+
+.featured { 
+    grid-row: 6 / -3;
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+
+/*****************
+main 
+*****************/
+main {
+    grid-row: -2 / -2;
+    grid-column: 1 / -1;
+}

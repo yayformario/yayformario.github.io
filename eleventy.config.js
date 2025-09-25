@@ -25,10 +25,6 @@ module.exports = async function(eleventyConfig) {
 	//Grabbing assets as well
 	eleventyConfig.addPassthroughCopy('./assets');
 
-	//Grabbing admin folder for Netlify's 'Identity' widget
-	eleventyConfig.addPassthroughCopy('src/admin');
-
-
 	//filter for formatting default javascript date
 	eleventyConfig.addFilter('postDate', (dateObj) => {
 	/*
@@ -42,5 +38,4 @@ module.exports = async function(eleventyConfig) {
 			.toLocaleString(DateTime.DATE_MED); //format to medium-style date
 	});
 	
-
 };
