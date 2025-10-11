@@ -40,7 +40,8 @@ html{
 /*****************
 Unordered list and list components 
 *****************/
-ul { /*resetting style */
+/*resetting style */
+ol, ul { 
   list-style: none;
   padding: 0;
 }
