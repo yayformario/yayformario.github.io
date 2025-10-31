@@ -3,5 +3,17 @@ websiteTitle: yayformar.io
 title: Main
 layout: 'templates/homeTemplate.njk'
 activePage: home
+
+eleventyImport:
+    collections: ["posts"]
 ---
-home page
+
+
+<div class = 'featured'>
+    <h1 class = 'title'>
+        Featured posts
+    </h1>
+
+    <p>Topics are loosly related to learning, interests, and memories</p>
+    {% include 'snippets/allPosts.njk'%}
+</div>

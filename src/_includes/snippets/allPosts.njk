@@ -5,7 +5,7 @@
         - "For each post in collections with 'featured'"
     -->
     <li>
-    {%- for post in collections.post | reverse  -%}
+    {%- for post in collections.posts | reverse  -%}
         {% include 'snippets/postPreview.njk'%}
     {%- endfor -%}
     </li>

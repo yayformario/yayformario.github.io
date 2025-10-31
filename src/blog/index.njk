@@ -3,6 +3,9 @@ websiteTitle: yayformar.io
 title: Blog
 layout: 'templates/blogTemplate.njk'
 activePage: blog
+
+eleventyImport:
+    collections: ["posts"]
 ---
 
 
@@ -12,4 +15,5 @@ activePage: blog
 </h1>
 
 {% include 'snippets/allPosts.njk'%}
+
 

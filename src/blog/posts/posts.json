@@ -2,5 +2,5 @@
     "author": "Mario Huerta",
     "layout": "templates/blogTemplate.njk",
     "websiteTitle": "yayformar.io",
-    "tags": ["post"]
+    "tags": ["posts"]
 }
