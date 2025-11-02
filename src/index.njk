@@ -1,19 +1,32 @@
 ---
 websiteTitle: yayformar.io
 title: Main
-layout: 'templates/homeTemplate.njk'
+layout: 'templates/construction.njk'
 activePage: home
 
 eleventyImport:
     collections: ["posts"]
 ---
 
-
-<div class = 'featured'>
-    <h1 class = 'title'>
-        Featured posts
-    </h1>
-
-    <p>Topics are loosly related to learning, interests, and memories</p>
-    {% include 'snippets/allPosts.njk'%}
+ <div class="container">
+    <div class="content">
+        <h1>🚧 Under Construction</h1>
+        <p class="subtitle">Something amazing is coming soon!</p>
+        <p class="description">
+            Initializing website. 
+            Check back later to see the final result.
+        </p>
+        <div class="contact-info">
+            <p>In the meantime, you can reach me at:</p>
+            <a href="mailto:contact@yayformar.io" class="email-link">contact@yayformar.io</a>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/yayformario" class="social-link">GitHub</a>
+            <a href="https://linkedin.com/in/yayformario" class="social-link">LinkedIn</a>
+        </div>
+    </div>
+    <div class="construction-animation">
+        <div class="cone"></div>
+        <div class="barrier"></div>
+    </div>
 </div>
