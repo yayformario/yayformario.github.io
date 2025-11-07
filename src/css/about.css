@@ -18,6 +18,7 @@ Date: June 17th, 2025
 }
 
 main {
+    background-color: red;
     grid-row: 2/-2;
     grid-column: 2/-2;
 }
