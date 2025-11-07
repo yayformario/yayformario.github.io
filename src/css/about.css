@@ -3,13 +3,30 @@ Author: Mario Huerta
 Date: June 17th, 2025
 *****************/
 
+:root {
+/* Resume root */
+    --resume-spacing-sm: 0.75rem;
+    --resume-spacing-md: 1.5rem;
+    --resume-spacing-lg: 2.5rem;
+    --resume-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --resume-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+  /* colors */
+    --slateGray: #878f99;
+    --warmTaupe: #a77c5f;
+    --mineralGreen: #588581;
+}
+
 main {
     grid-row: 2/-2;
     grid-column: 2/-2;
 }
 
-/*Unordered list */
-ul {    
+/*
+|--------------------------|
+Unordered lists
+|--------------------------|
+*/ul {    
     list-style-type: disc;
     list-style-position: inside;
 }
@@ -19,18 +36,238 @@ li {
 }
 
 ul li {
-    margin-left: 5px;
+    margin-left:15px;
 
 }
 ul li li {
-    margin-left: 10px;
-    margin-top: 15px;
+    margin-left: 30px;
     list-style-type:circle
+
+}
+
+h1 {
+    text-align: center;
+}
+
+/*
+|--------------------------|
+Education
+|--------------------------|
+*/
+
+.educationSection {
+    margin-bottom: 2rem;
+
+}
+.educationOverview {
+    background: linear-gradient(135deg, #2d3f36 0%, #3B3F2F 100%);
+    border-radius: 12px;
+
+    margin: 2rem 0;
+    padding: 2rem;
+
+    border-left: 4px solid;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.educationOverview h1 {
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+
+    border-bottom: 2px solid #e2e8f0;
+
+}
+
+.educationOverview h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.educationOverview ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.educationOverview li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.educationOverview li::before {
+  content: "🎓";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+
+/*
+|--------------------------|
+Coursework
+|--------------------------|
+*/
+.coursework {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    list-style: none;
+    border-bottom: #93c5fd;
+}
+
+.coursework > li {
+    flex: 1;
+
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.coursework > li.mathematics {
+    /* Blue for math */
+    border-left-color: var(--slateGray); 
+}
+
+.coursework > li.compsci {
+    /* Green for CS */
+    border-left-color: var(--warmTaupe);
+}
+
+/* Style the nested lists */
+.coursework ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.coursework ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.coursework ul li:last-child {
+    border-bottom: none;
+}
+
+/*
+|--------------------------|
+Resume 
+|--------------------------|
+*/
+/* Resume section container */
+.resumeSection {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--resume-spacing-md);
+}
+
+/* Individual job entries */
+.jobEntry {
+  border-radius: 8px;
+  padding: var(--resume-spacing-lg);
+  margin-bottom:  var(--resume-spacing-lg);
+  border-left: 4px solid;
+  border-left-color: var(--mineralGreen);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Timeline indicator 
+.jobEntry::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: var(--resume-spacing-lg);
+  width: 4px;
+  height: 40px;
+  background: var(--resume-accent);
+  border-radius: 8px;
+}
+*/
+
+.jobEntry:hover {
+  box-shadow: var(--resume-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Company header */
+.jobHeader {
+  margin-bottom: var(--resume-spacing-md);
+  padding-bottom: var(--resume-spacing-sm);
+  border-bottom: 2px solid var(--resume-border);
+}
+
+.jobCompany {
+  margin: 0 0 0.25rem 0;
+}
+
+.jobTitle {
+  margin: 0;
+}
+
+.jobAccomplishments li {
+  padding: var(--resumeSpacingSm) 0;
+  padding-left: var(--resumeSpacingMd);
+  line-height: 1.6;
 }
 
 
-h1{
+
+/*
+|--------------------------|
+Contact section 
+|--------------------------|
+*/
+.contactSection {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-radius: 16px;
+
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+
     text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
 
+.contactSection h1 {
+    font-size: 2.5rem;
 
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.contactSection p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+.contactSection strong {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contactSection a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contactSection a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

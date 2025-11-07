@@ -25,19 +25,43 @@ Also like to organize things as:
 /* Dark Academia coloring by default*/
 :root {
 
+  /*Greens*/
+  --mineralGreen: #588581;
   --darkGreen: #2d3f36;
+  --oliveSmoke: #5E6253;
+  --forestMoss: #3B3F2F;
 
+  /* Grays */
+  --slateGray: #878f99;
+  
+  /* Tans */
+  --antiqueIvory: #EDE5DC;
+  --ash: #a59f8e;
+  
+
+  /*Yellows*/
   --lightYellow: #F5DEB3;
   --lemonade: #f6d267;
   --activeYellow: #ffd642;
   
-  --pumpkin: #FF7518;
-  --brown: #81583c;
+  /*Browns*/
+  --warmTaupe: #a77c5f;
   --darkBrown: #6B2D2C;
+  --brown: #81583c;
+  --spine: #592f32;
+  --cocoaBean: #4F271C;
 
+  /*Reds*/
+  --russet: #5b3e33;
+
+  /*Ambers*/
+  --pumpkin: #FF7518;
+  --burntUmber: #7E3E28;
   --rust: #B7410E;
 
+  /*Blues*/
   --aliceBlue: #f0f8ff;
+  --twilightBlue: #2C3E50;
   --navyBlue: #000080;
   --darkBlue: #1d2631;
 
@@ -48,23 +72,23 @@ Global links
 *****************/
 /* Global Unvisited links */
 a:link {
-  color: aliceblue;
+  color: var(--aliceBlue);
 }
 /* global visited links */
 a:visited {
-  color: aliceblue;
+  color: var(--darkBlue);
 }
 /* mouse over */
 a:hover {
-  color: #1d2631;
+  color: var(--pumpkin);
 }
 /* keyboard focus */
 a:focus {
-  color: #1d2631;
+  color: var(--pumpkin);
 }
 /* being clicked */
 a:active {
-  color: #1d2631;
+  color: var(--rust);
 }
 
 
@@ -106,7 +130,7 @@ body{
 Grid: topnav
 *****************/
 .topnav{
-  background-color: var(--Brown);
+  background-color: var(--brown);
   color: var(--lightYellow);
 
   grid-row: 1/2;
@@ -137,7 +161,7 @@ Grid: topnav
 }
 
 .externalLinks a {
-  color: var(--Lemonade);
+  color: var(--lemonade);
   box-shadow: 0px 1px 5px;
   border-radius: 8px 8px 8px 8px;
 }

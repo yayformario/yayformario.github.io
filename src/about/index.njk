@@ -12,17 +12,17 @@ activePage: about
 
 <!-- Education -->
 <section class = "educationSection">
-    <h1> Education </h1>
-    <h2> University of Central Florida </h2>
+    <div class = 'educationOverview'>
+        <h1> Education </h1>
+        <h2> University of Central Florida </h2>
+        <ul>
+            <li> Bachelor's in Mathematics </li>
+            <li> Minor in Computer Science </li>
+        </ul>
+    </div>
 
-    <ul>
-        <li> Bachelor's in Mathematics </li>
-        <li> Minor in Computer Science </li>
-    </ul>
-
-    <h2> Coursework </h2>
-    <ul>
-        <li>Mathematics
+    <div class = 'coursework'>
+        <li class = "mathematics">Mathematics
             <ul>
                 <li> Advanced Calculus </li>
                 <li> Ordinary Differential Equations </li>
@@ -36,7 +36,7 @@ activePage: about
                 <li> Physics </li>
             </ul>
         </li>
-        <li>Computer Science
+        <li class = 'compsci'> Computer Science
             <ul>
                 <li> Data Structures </li>
                 <li> Algorithmic Time Complexity </li>
@@ -47,31 +47,44 @@ activePage: about
                 <li> Malware Analysis </li>
             </ul>
         </li>
-    </ul>
+    </div >
 </section>
 
-
+<!-- Projects 
 <section class = 'projectsSection'>
     <h1> Projects </h1>
 </section>
+-->
 
+<!-- Leetcode 
 <section class = 'leetCodeSection'>
     <h1> Leetcode </h1>
 </section>
+-->
 
+<!-- Resume  -->
 <section class = "resumeSection"> 
     <h1> Resume </h1>
-    <h2 class = 'shadow'>Shadow.tech</h2>
-    <h3>IT Support Specialist</h3>
-    <ul>
-        <li>Training & Mentorship: Onboarded and trained two new support agents, successfully guiding them to meet all key performance metrics by the end of their training period.</li>
-        <li>Zendesk & Sprinklr: Managed a high-volume queue, personally resolving 1,200+ tickets monthly, accounting for 15% of the team's total volume.</li>
-        <li>GitLab: Contributed to the product's technical health by actively investigating and documenting 10-15 technical issues per month.</li>
-        <li>Network Analysis & Optimization: Investigated 1-2 monthly instances of unusual user-to-data center pathing; diagnosed root causes (ISP issues, faulty nodes) and identified optimal routing solutions to restore performance.</li>
-        <li>Data Analysis & Fraud Investigation: Utilized Stripe, Grafana, and OpenStack to perform quantitative analysis, leading to the investigation of 40-60 monthly financial disputes and the detection of fraudulent accounts, security breaches, and policy violations.</li>
-        <li>Marketing Communications: Authored and executed customer-facing email campaigns and company-wide updates using Brevo.</li>
-        <li>Content Localization: Enhanced global support accessibility by translating Help Center articles from French to English and Spanish.</li>
-    </ul>
+    <div class = 'jobEntry'>
+        <div class = 'jobHeader'>
+            <h2 class = 'jobCompany'>Shadow.tech</h2>
+            <h3 class = 'jobTitle'>IT Support Specialist</h3>
+        </div>
+        
+        <ul class = 'jobAccomplishments'>
+            <li>Training & Mentorship: Onboarded and trained two new support agents, successfully guiding them to meet all key performance metrics by the end of their training period.</li>
+            <li>Zendesk & Sprinklr: Managed a high-volume queue, personally resolving 1,200+ tickets monthly, accounting for 15% of the team's total volume.</li>
+            <li>GitLab: Contributed to the product's technical health by actively investigating and documenting 10-15 technical issues per month.</li>
+            <li>Network Analysis & Optimization: Investigated 1-2 monthly instances of unusual user-to-data center pathing; diagnosed root causes (ISP issues, faulty nodes) and identified optimal routing solutions to restore performance.</li>
+            <li>Data Analysis & Fraud Investigation: Utilized Stripe, Grafana, and OpenStack to perform quantitative analysis, leading to the investigation of 40-60 monthly financial disputes and the detection of fraudulent accounts, security breaches, and policy violations.</li>
+            <li>Marketing Communications: Authored and executed customer-facing email campaigns and company-wide updates using Brevo.</li>
+            <li>Content Localization: Enhanced global support accessibility by translating Help Center articles from French to English and Spanish.</li>
+        </ul>
+    </div>
+
+
+
+
 </section>
 
 <section class = "contactSection">
