@@ -1,0 +1,8 @@
+---
+title: Post 1
+description: None
+date: 2025-08-26T00:00-04:00
+---
+
+
+There was something special about this little creature. Donna couldn't quite pinpoint what it was, but she knew with all her heart that it was true. It wasn't a matter of if she was going to try and save it, but a matter of how she was going to save it. She went back to the car to get a blanket and when she returned the creature was gone.

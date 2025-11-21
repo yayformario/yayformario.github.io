@@ -4,16 +4,35 @@ title: Blog
 layout: 'templates/blogTemplate.njk'
 activePage: blog
 
-eleventyImport:
-    collections: ["posts"]
+pagination:
+  data: collections.posts
+  size: 5
+  alias: posts
+permalink: "blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}"
 ---
 
 
-<!-- Where the maint content will go-->
-<h1 class = 'blogTitle'>
-    The Daily Deployment
-</h1>
+<div class="blogContainer">
+  <div class="blogPosts">
+    {% for post in posts %}
+    <article class="blogPost">
+      <img src="{{ post.data.thumbnail }}" 
+             alt="{{ post.data.title }}" 
+             class="postThumbnail">
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      <p>{{ post.date | postDate }}</p>
+    </article>
+    {% endfor %}
+  </div>
 
-{% include 'snippets/allPosts.njk'%}
+  <nav class="blogPagination">
+    {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">← Previous Page</a>
+    {% endif %}
 
+    {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">Next Page →</a>
+    {% endif %}
+  </nav>
+</div>
 

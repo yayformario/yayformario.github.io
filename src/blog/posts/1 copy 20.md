@@ -1,0 +1,8 @@
+---
+title: Test 20
+description: None
+date: 2025-08-26T00:00-04:00
+---
+
+
+"It was so great to hear from you today and it was such weird timing," he said. "This is going to sound funny and a little strange, but you were in a dream I had just a couple of days ago. I'd love to get together and tell you about it if you're up for a cup of coffee," he continued, laying the trap he'd been planning for years.

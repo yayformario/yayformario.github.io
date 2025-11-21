@@ -5,9 +5,74 @@ Date: June 17th, 2025
 
 *****************/
 
-
 main {
     text-align: center;
     grid-row: 2/-2;
     grid-column: 2/-2;
+}
+
+/* Minimal blog styling */
+.blogContainer {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.blogPost {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.postThumbnail {
+    height: 250px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;  /* Center the thumbnail */
+}
+.blogPost:last-child {
+  border-bottom: none;
+}
+
+.blogPost h3 {
+  margin: 0 0 0.25rem 0;
+}
+
+.blogPost h3 a {
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.blogPost h3 a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.blogPost p {
+  color: #6b7280;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.blogPagination {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.blogPagination a {
+  padding: 0.5rem 1rem;
+  color: #3b82f6;
+  text-decoration: none;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.blogPagination a:hover {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
 }

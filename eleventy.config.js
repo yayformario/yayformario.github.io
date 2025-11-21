@@ -23,7 +23,7 @@ module.exports = async function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/css/");
 
 	//Grabbing assets as well
-	eleventyConfig.addPassthroughCopy('./assets');
+	eleventyConfig.addPassthroughCopy('src/media');
 
 	//filter for formatting default javascript date
 	eleventyConfig.addFilter('postDate', (dateObj) => {

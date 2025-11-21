@@ -1,0 +1,8 @@
+---
+title: Test 2
+description: None
+date: 2025-08-26T00:00-04:00
+---
+
+
+It seemed like it should have been so simple. There was nothing inherently difficult with getting the project done. It was simple and straightforward enough that even a child should have been able to complete it on time, but that wasn't the case. The deadline had arrived and the project remained unfinished.
