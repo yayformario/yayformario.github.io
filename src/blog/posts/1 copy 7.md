@@ -1,8 +1,0 @@
----
-title: Post 1
-description: None
-date: 2025-08-26T00:00-04:00
----
-
-
-He heard the loud impact before he ever saw the result. It had been so loud that it had actually made him jump back in his seat. As soon as he recovered from the surprise, he saw the crack in the windshield. It seemed to be an analogy of the current condition of his life.

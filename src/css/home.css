@@ -4,32 +4,137 @@ Date: August 16th, 2025
 *****************/
 
 /*****************
-Intro 
-*****************/
-.blogDescription {
-    background-color: aliceblue;
-    grid-row: 2 / 6;
-    grid-column: 1 / 6;
-}
-
-.profilePic {
-    background-color: brown;
-    grid-row: 2 / 6;
-    grid-column: 6 / -1;
-}
-
-
-.featured { 
-    grid-row: 6 / -3;
-    grid-column: 1 / -1;
-    text-align: center;
-}
-
-
-/*****************
 main 
 *****************/
 main {
-    grid-row: -2 / -2;
-    grid-column: 1 / -1;
+    grid-row: 2/-2;
+    grid-column: 2/-2;
 }
+
+  /* Minimal intro */
+  .homeIntro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .homeTitle {
+    font-size: clamp(2.0rem, 4vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .homeSubtitle {
+    font-size: clamp(1.125rem, 4vw, 1.5rem);
+    font-weight: 400;
+  }
+  
+  /* Minimal Stats */
+  .minimalStats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    max-width: 600px;
+  }
+  
+  .minimalStat {
+    text-align: center;
+  }
+  
+  .statValue {
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+  }
+  
+  .statLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+  }
+  
+  /* Recent Posts - Minimal */
+  .recent {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+  
+  .recentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .viewAll {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+  
+  .viewAll:hover {
+    text-decoration: underline;
+  }
+  
+  .recentPostsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .postElement {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .postDate {
+    font-size: 0.875rem;
+    min-width: 100px;
+  }
+  
+  .postTitle {
+    font-size: 1.125rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .postElement {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+    
+    .postDate {
+      order: 2;
+      min-width: auto;
+      font-size: 0.75rem;
+    }
+    
+    .postTitle {
+      order: 1;
+      font-size: 1rem;
+    }
+    
+    .postArrow {
+      display: none;
+    }
+    
+    .minimalStats {
+      gap: 2rem;
+    }
+  }

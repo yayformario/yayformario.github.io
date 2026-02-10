@@ -1,8 +1,0 @@
----
-title: Post 1
-description: None
-date: 2025-08-26T00:00-04:00
----
-
-
-Spending time at national parks can be an exciting adventure, but this wasn't the type of excitement she was hoping to experience. As she contemplated the situation she found herself in, she knew she'd gotten herself in a little more than she bargained for. It wasn't often that she found herself in a tree staring down at a pack of wolves that were looking to make her their next meal.

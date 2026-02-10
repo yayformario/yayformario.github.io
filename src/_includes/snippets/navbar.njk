@@ -1,46 +1,18 @@
-<nav class = 'topnav'>
-     <div class = 'navBranding'> {{ websiteTitle }} </div>
+<div
+    class='websiteLinks'>
+    <!-- if the activePage is equal to 'home'
+        use 'active
+    else use '' -->
 
-     <div class='linksGroup'>
-        <div class = 'websiteLinks'>
-            <!--
-            if the activePage is equal to 'home'
-                use 'active
-            else use ''
-            -->
-            
-            <a 
-                class="{% if activePage == 'home' %}active{% endif %}"
-                href="/index.html"> 
-                Home
-            </a>
-
-            <a
-                class="{% if activePage == 'blog' %}active{% endif %}"
-                href="/blog"> 
-                Blog
-            </a>
-
-            <a
-                class="{% if activePage == 'about' %}active{% endif %}"
-                href="/about"> 
-                About
-            </a>
-        </div>
-
-        <div class = 'externalLinks'>
-            <!-- TODO: 
-            Find icons for linked and github 
-            -->
-            <a
-                href="https://www.linkedin.com/in/yayformario/" target='_blank'> 
-                LinkedIn
-            </a>
-
-            <a
-                href="https://github.com/yayformario" target='_blank'> 
-                Github
-            </a>
-        </div>
-     </div> <!-- linksGroup-->
-</nav>
+    <a class="{% if activePage == 'home' %}active{% else %}navLink{% endif%}" 
+        href="/index.html">
+        Home
+    </a>
+    <a class="{% if activePage == 'blog' %}active{% else %}navLink{% endif %}" 
+        href="/blog">
+        Blog
+    </a>
+    <a class="{% if activePage == 'about' %}active{% else %}navLink{% endif %}" href="/about">
+        About
+    </a>
+</div>

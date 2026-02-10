@@ -4,24 +4,22 @@ Date: June 17th, 2025
 *****************/
 
 :root {
-/* Resume root */
-    --resume-spacing-sm: 0.75rem;
-    --resume-spacing-md: 1.5rem;
-    --resume-spacing-lg: 2.5rem;
-    --resume-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --resume-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05);
+  /*Linear Gradients*/
+  --greenGradient: linear-gradient(135deg, #2d3f36 0%, #3B3F2F 100%);
 
-  /* colors */
-    --slateGray: #878f99;
-    --warmTaupe: #a77c5f;
-    --mineralGreen: #588581;
+  /* Resume root */
+  --resume-spacing-sm: 0.75rem;
+  --resume-spacing-md: 1.5rem;
+  --resume-spacing-lg: 2.5rem;
+  --resume-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --resume-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-main {
-    grid-row: 2/-2;
-    grid-column: 2/-2;
-}
+section {
+  max-width: 800px;
+  margin: 3rem auto;
 
+}
 /*
 |--------------------------|
 Unordered lists
@@ -47,6 +45,7 @@ ul li li {
 
 h1 {
     text-align: center;
+
 }
 
 /*
@@ -60,7 +59,7 @@ Education
 
 }
 .educationOverview {
-    background: linear-gradient(135deg, #2d3f36 0%, #3B3F2F 100%);
+    background: var(--greenGradient);
     border-radius: 12px;
 
     margin: 2rem 0;
@@ -73,8 +72,8 @@ Education
 .educationOverview h1 {
     margin: 0 0 1rem 0;
     padding-bottom: 0.5rem;
-
     border-bottom: 2px solid #e2e8f0;
+
 
 }
 
@@ -110,13 +109,19 @@ Coursework
 |--------------------------|
 */
 .coursework {
-    display: flex;
+    background: var(--greenGradient);
+
     gap: 2rem;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0;
     list-style: none;
     border-bottom: #93c5fd;
+}
+.coursework h1{
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
 }
 
 .coursework > li {
@@ -134,7 +139,7 @@ Coursework
 
 .coursework > li.compsci {
     /* Green for CS */
-    border-left-color: var(--warmTaupe);
+    border-left-color: var(--lightBrown);
 }
 
 /* Style the nested lists */
@@ -146,7 +151,6 @@ Coursework
 
 .coursework ul li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #e9ecef;
 }
 
 .coursework ul li:last-child {
@@ -160,9 +164,13 @@ Resume
 */
 /* Resume section container */
 .resumeSection {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 var(--resume-spacing-md);
+  background: var(--greenGradient);
+}
+
+.resumeSection h1{ 
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
 }
 
 /* Individual job entries */
@@ -171,7 +179,7 @@ Resume
   padding: var(--resume-spacing-lg);
   margin-bottom:  var(--resume-spacing-lg);
   border-left: 4px solid;
-  border-left-color: var(--mineralGreen);
+  border-left-color: var(--cyan1);
   transition: all 0.3s ease;
   position: relative;
 }
@@ -216,18 +224,16 @@ Resume
 }
 
 
-
 /*
 |--------------------------|
-Contact section 
+  Contact section 
 |--------------------------|
 */
 .contactSection {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    background: var(--greenGradient);
     border-radius: 16px;
 
     padding: 3rem 2rem;
-    margin: 3rem 0;
 
     text-align: center;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -238,8 +244,6 @@ Contact section
 
     margin: 0 0 1.5rem 0;
     padding-bottom: 0.5rem;
-
-    border-bottom: 2px solid #e2e8f0;
 }
 
 .contactSection p {
@@ -252,22 +256,23 @@ Contact section
 
 .contactSection strong {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1rem 2rem;
+  background: rgba(157, 61, 61, 0.1);
+  padding: 1rem;
+  margin: 1rem;
   border-radius: 50px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contactSection a {
-  color: #60a5fa;
+  color: var(lightBlue1);
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .contactSection a:hover {
-  color: #93c5fd;
+  color: var(lightBlue2);
   text-decoration: underline;
   text-underline-offset: 3px;
 }

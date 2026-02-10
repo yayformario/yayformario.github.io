@@ -1,32 +1,43 @@
 ---
 websiteTitle: yayformar.io
 title: Main
-layout: 'templates/construction.njk'
+layout: 'templates/homeTemplate.njk'
 activePage: home
 
 eleventyImport:
     collections: ["posts"]
 ---
 
- <div class="container">
-    <div class="content">
-        <h1>🚧 Under Construction</h1>
-        <p class="subtitle">Available soon!</p>
-        <p class="description">
-            Initializing website. 
-            Check back later to see the final result.
-        </p>
-        <div class="contact-info">
-            <p>In the meantime, you can reach me at:</p>
-            <a href="mailto:contact@yayformar.io" class="email-link">contact@yayformar.io</a>
-        </div>
-        <div class="social-links">
-            <a href="https://github.com/yayformario" class="social-link">GitHub</a>
-            <a href="https://linkedin.com/in/yayformario" class="social-link">LinkedIn</a>
-        </div>
-    </div>
-    <div class="construction-animation">
-        <div class="cone"></div>
-        <div class="barrier"></div>
-    </div>
+<!-- Minimal Hero -->
+<section class="homeIntro">
+  <div>
+    <h1 class="homeTitle">The Daily Deployment</h1>
+    <p class="homeSubtitle">Just a a dude with a blog</p>
+  </div>
+</section>
+<!-- Minimal Stats -->
+<div class="minimalStats">
+  <div class="minimalStat">
+    <span class="statValue">{{ collections.posts.length }}</span>
+    <span class="statLabel">Posts</span>
+  </div>
 </div>
+<!-- Recent Posts -->
+<section class="recent">
+  <div class="recentHeader">
+    <h2 class="sectionTitle">Recent Posts</h2>
+    <a href="/blog/" class="viewAll">View all →</a>
+  </div>
+
+  <!-- Show latest 3 posts -->
+  <div class="recentPostsList">
+    {% for post in collections.posts | reverse %}
+      {% if loop.index <= 3 %}
+        <div class="postElement">
+          <div class="postDate">{{ post.date | postDate }}</div>
+          <a href="{{ post.url }}" class="postTitle">{{ post.data.title }}</a>
+          <a href="{{ post.url }}" class="postArrow">→</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>

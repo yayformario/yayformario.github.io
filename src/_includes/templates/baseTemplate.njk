@@ -21,22 +21,22 @@
 
     <body>
         <!-- Navbar -->
-        {% include 'snippets/navbar.njk'%}
+
+        {% include 'snippets/topnav.njk'%}
 
         {% block starter %} 
         {% endblock %}
 
         <!-- Markdown content goes here -->
-        <main> 
-            {{ content | safe }}
-        </main>
-        
+        {% block main %} 
+        {% endblock %}
+
         <footer>
+                {% include 'snippets/navbar.njk'%}
+
             {% include 'snippets/footer.njk'%}
         </footer>
         <!-- Scripts -->
         <script src="/js/main.js"></script>
     </body>
-
-  
 </html>

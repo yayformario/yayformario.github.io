@@ -5,5 +5,10 @@
 {% endblock %}
 
 {% block starter %} 
-    {% include 'snippets/intro.njk'%}
+{% endblock %}
+
+{% block main %} 
+<main>  
+    {{ content | safe }}
+</main>
 {% endblock %}

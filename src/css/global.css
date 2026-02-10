@@ -25,34 +25,45 @@ Also like to organize things as:
 /* Dark Academia coloring by default*/
 :root {
 
+  /*Whites*/
+  --white1: #e5e7eb;
+  --white2: #d1d5db;
+
+  /*Cyans*/
+  --cyan1: #588581;
+
+
   /*Greens*/
-  --mineralGreen: #588581;
   --darkGreen: #2d3f36;
-  --oliveSmoke: #5E6253;
-  --forestMoss: #3B3F2F;
+  --forestGreen: #5E6253;
+  --forestGreen2: #3B3F2F;
 
   /* Grays */
   --slateGray: #878f99;
   
   /* Tans */
-  --antiqueIvory: #EDE5DC;
+  --ivory: #EDE5DC;
   --ash: #a59f8e;
   
 
   /*Yellows*/
   --lightYellow: #F5DEB3;
-  --lemonade: #f6d267;
-  --activeYellow: #ffd642;
+  --yellow1: #f6d267;
+  --yellow2: #ffd642;
   
   /*Browns*/
-  --warmTaupe: #a77c5f;
-  --darkBrown: #6B2D2C;
-  --brown: #81583c;
-  --spine: #592f32;
-  --cocoaBean: #4F271C;
+  --lightBrown: #a77c5f;
+  --lightBrown2: #a76538;
+
+  --brown1: #81583c;
+  --brown2: #5b3e33;
+  --brown3: #653928;
+
 
   /*Reds*/
-  --russet: #5b3e33;
+    --darkRed: #6B2D2C;
+    --darkRed2: #592f32;
+    --darkRed3: #4F271C;
 
   /*Ambers*/
   --pumpkin: #FF7518;
@@ -60,35 +71,14 @@ Also like to organize things as:
   --rust: #B7410E;
 
   /*Blues*/
-  --aliceBlue: #f0f8ff;
-  --twilightBlue: #2C3E50;
-  --navyBlue: #000080;
-  --darkBlue: #1d2631;
+    --lightBlue1: #f0f8ff;
+    --lighBlue2: #93c5fd;
+    --lightBlue3: #60a5fa;
+    --blue: #3b82f6;
+    --navyBlue: #000080;
+    --darkBlue: #2C3E50;
+    --darkBlue2: #1d2631;
 
-}
-
-/*****************
-Global links  
-*****************/
-/* Global Unvisited links */
-a:link {
-  color: var(--aliceBlue);
-}
-/* global visited links */
-a:visited {
-  color: var(--darkBlue);
-}
-/* mouse over */
-a:hover {
-  color: var(--pumpkin);
-}
-/* keyboard focus */
-a:focus {
-  color: var(--pumpkin);
-}
-/* being clicked */
-a:active {
-  color: var(--rust);
 }
 
 
@@ -107,6 +97,13 @@ ol, ul {
   padding: 0;
 }
 
+/*****************
+Main
+*****************/
+main {
+    grid-row: 2/-2;
+    grid-column: 2/-2;
+}
 
 /*****************
 Grid: body
@@ -127,10 +124,10 @@ body{
 }
 
 /*****************
-Grid: topnav
+Grid: Navbar
 *****************/
 .topnav{
-  background-color: var(--brown);
+  background-color: var(--brown1);
   color: var(--lightYellow);
 
   grid-row: 1/2;
@@ -143,38 +140,51 @@ Grid: topnav
   justify-content: space-between;
 }
 
-.linksGroup{
-  /*TO DO:
-  Make a tiny drop down menu for super short lengths
-  */
-  display: flex;
-  align-items: center;
-}
-
-.linksGroup a {
-  color: var(--lightYellow);
+/*****************
+Global links  
+*****************/
+/* Global Unvisited links */
+a:link {
+  color: var(--ashe);
   text-decoration: none;
+
+}
+/* global visited links */
+a:visited {
+  color: var(--lightBrown2);
+}
+/* mouse over */
+a:hover {
+  color: var(--lightBlue3);
+}
+/* keyboard focus */
+a:focus {
+  color: var(--pumpkin);
+}
+/* being clicked */
+a:active {
+  color: var(--rust);
+}
+/* Website links */ 
+/*retain color to the active/ current link and title page*/
+
+.websiteLinks a.active {
+  color: var(--yellow2);
+}
+.websiteLinks a{
+  color: var(--ashe);
 }
 
-.websiteLinks {
-  margin-right: 5px;
+.navBranding a {
+  color: var(--ashe);
+}
+.navLink{
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin: 0rem 0.2rem;
+    padding: 0.2rem 0.3rem;
 }
 
-.externalLinks a {
-  color: var(--lemonade);
-  box-shadow: 0px 1px 5px;
-  border-radius: 8px 8px 8px 8px;
-}
-
-/*Change color of links on hover*/
-nav a:hover {
-  color: var(--darkBrown);
-}
-
-/*Add color to the active/ current link*/
-.topnav a.active {
-  color: var(--activeYellow);
-}
 
 /***************** 
 Footer grid
@@ -203,8 +213,8 @@ Mobile stuff
   .topnav {
     flex-wrap: wrap;
   } 
-}
 
+}
 
 
 /**** 

@@ -1,1 +1,14 @@
 {% extends "templates/baseTemplate.njk"%}
+
+{% block styles %}
+<link rel="stylesheet" href="/css/post.css">
+{% endblock %}
+
+{% block starter %} 
+{% endblock %}
+
+{% block main %} 
+<main class = "post-content">  
+    {{ content | safe }}
+</main>
+{% endblock %}
