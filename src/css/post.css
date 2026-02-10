@@ -1,0 +1,288 @@
+/*****************
+Author: Mario Huerta
+Date: June 17th, 2025
+*****************/
+
+main {
+    text-align: center;
+}
+
+/* Modern blog post container */
+.post-content {
+  max-width: 65ch; /* Optimal reading width */
+  margin: 0 auto;
+  line-height: 1.75;
+  /***
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  ***/
+}
+
+/* Modern typography scale */
+.post-content h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 3rem 0 1.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.post-content h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 2.5rem 0 1rem 0;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+
+.post-content h3 {
+  font-size: clamp(1.375rem, 3vw, 1.5rem);
+  font-weight: 600;
+  margin: 2rem 0 0.75rem 0;
+}
+
+.post-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+/* Paragraphs with better spacing */
+.post-content p {
+  margin: 1.75rem 0;
+  font-size: 1.125rem;
+}
+
+/* Modern links */
+.post-content a {
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.1rem 0.2rem;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid rgba(37, 99, 235, 0.2);
+}
+
+.post-content a:hover {
+  background: linear-gradient(120deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+  border-radius: 3px;
+}
+
+/* Modern lists */
+.post-content ul,
+.post-content ol {
+  margin: 1.75rem 0;
+  padding-left: 1.75rem;
+}
+
+.post-content li {
+  margin: 0.875rem 0;
+  position: relative;
+  padding-left: 0.25rem;
+}
+
+.post-content ul li::before {
+  content: '▸';
+  position: relative;
+  left: -1.25rem;
+  font-size: 0.875em;
+}
+
+.post-content ol {
+  counter-reset: item;
+}
+
+.post-content ol li {
+  counter-increment: item;
+}
+
+.post-content ol li::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: -1.5rem;
+  font-weight: 600;
+}
+
+/* Elegant blockquotes */
+.post-content blockquote {
+  border-left: 4px solid;
+  border-image: linear-gradient(to bottom, #3b82f6, #8b5cf6) 1;
+  margin: 2.5rem 0;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 0 12px 12px 0;
+  position: relative;
+  font-style: normal;
+}
+
+.post-content blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  font-size: 4rem;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.post-content blockquote p {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+/* Modern code blocks */
+.post-content pre {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 2.5rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  border: 1px solid #334155;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.post-content pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.post-content pre::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-radius: 4px;
+}
+
+.post-content pre::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+.post-content pre::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+.post-content code {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.875em;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  font-weight: 500;
+  border: 1px solid #cbd5e1;
+}
+
+.post-content pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* Modern images */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 3rem auto;
+  display: block;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-content img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Modern tables */
+.post-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.post-content th {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  font-weight: 600;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+}
+
+.post-content td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.post-content tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.post-content tr:hover {
+  background: #f1f5f9;
+}
+
+/* Modern horizontal rule */
+.post-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+  margin: 4rem auto;
+  width: 80%;
+}
+
+/* Modern strong/emphasis */
+.post-content strong {
+  font-weight: 700;
+  background: linear-gradient(120deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
+  padding: 0.1rem 0.2rem;
+  border-radius: 3px;
+}
+
+.post-content em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+  .post-content {
+    padding: 0 1.25rem;
+  }
+  
+  .post-content h1 {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+  
+  .post-content h2 {
+    font-size: clamp(1.5rem, 6vw, 1.75rem);
+  }
+  
+  .post-content p {
+    font-size: 1.0625rem;
+  }
+  
+  .post-content pre {
+    padding: 1.5rem;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    border-radius: 0;
+  }
+  
+  .post-content img {
+    border-radius: 12px;
+    margin: 2rem -1.25rem;
+    width: calc(100% + 2.5rem);
+    max-width: calc(100% + 2.5rem);
+  }
+}
+
