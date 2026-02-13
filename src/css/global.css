@@ -198,7 +198,6 @@ footer{
 
   height: 75px;
   max-height: 75px;
-  align-self: end;
 
   align-content: center;
   justify-items: center; 
@@ -213,6 +212,9 @@ Mobile stuff
   .topnav {
     flex-wrap: wrap;
   } 
+  .footer {
+    flex-wrap: wrap;
+  }
 
 }
 
