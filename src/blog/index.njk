@@ -14,7 +14,7 @@ permalink: "blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{
 
 <div class="blogContainer">
   <div class="blogPosts">
-    {% for post in posts %}
+    {% for post in posts | reverse%}
     <article class="blogPost">
       <img src="{{ post.data.thumbnail }}" 
              alt="{{ post.data.title }}" 

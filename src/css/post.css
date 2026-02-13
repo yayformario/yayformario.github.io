@@ -72,6 +72,7 @@ main {
 }
 
 /* Modern lists */
+/* Modern lists */
 .post-content ul,
 .post-content ol {
   margin: 1.75rem 0;
@@ -82,11 +83,12 @@ main {
   margin: 0.875rem 0;
   position: relative;
   padding-left: 0.25rem;
+  background-color: var(--forestGreen2);
 }
 
 .post-content ul li::before {
   content: '▸';
-  position: relative;
+  position: absolute;
   left: -1.25rem;
   font-size: 0.875em;
 }
@@ -105,6 +107,7 @@ main {
   left: -1.5rem;
   font-weight: 600;
 }
+
 
 /* Elegant blockquotes */
 .post-content blockquote {
